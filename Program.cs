@@ -6,7 +6,10 @@ namespace PeerProgram
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // Instantiates BankCustomer Object with name Manny called employee1
+            var customer1 = new BankCustomer("Manny");
+            // Instantiates BankCustomer Object with name Willy called employee2
+            var customer2 = new BankCustomer("Willy");
         }
     }
 }
