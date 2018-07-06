@@ -13,9 +13,10 @@ namespace PeerProgram
 
         // 4 private member variables: customerName, checkings, savings, and loans
         private string customerName;
-        private double checkings;
-        private double savings;
-        private double loans;
+        // private double checkings;
+        // private double savings;
+        // private double loans;
+        private double amount;
 
         // Public properties
         public string Name
@@ -30,52 +31,71 @@ namespace PeerProgram
                 customerName = value;
             }
         }
-        public double BaseCheckings
+        // public double BaseCheckings
+        // {
+        //     get
+        //     {
+        //         return checkings;
+        //     }
+
+        //     set
+        //     {
+        //         checkings = value;
+        //     }
+        // }
+        // public double BaseSavings
+        // {
+        //     get
+        //     {
+        //         return savings;
+        //     }
+
+        //     set
+        //     {
+        //         savings = value;
+        //     }
+        // }
+
+        public double Amount
         {
             get
             {
-                return checkings;
+                return amount;
             }
 
             set
             {
-                checkings = value;
-            }
-        }
-        public double BaseSavings
-        {
-            get
-            {
-                return savings;
-            }
-
-            set
-            {
-                savings = value;
+                amount = value;
             }
         }
 
-        public double Loans { get => loans; set => loans = value; }
+        // public double Loans { get => loans; set => loans = value; }
 
         // Constructor
-        public BankAccount(String name, double baseCheckings, double baseSavings)
+        public BankAccount(String name, double amount)
         {
             this.Name = name;
-            this.BaseCheckings = baseCheckings;
-            this.BaseSavings = baseSavings;
-            this.Loans = loans;
+            this.Amount = amount;
+            // this.BaseCheckings = baseCheckings;
+            // this.BaseSavings = baseSavings;
+            // this.Loans = loans;
         }
 
         // This method returns the employee's base salary
-        public double getBaseCheckings()
-        {
-            return this.BaseCheckings;
-        }
+        // public double getBaseCheckings()
+        // {
+        //     return this.BaseCheckings;
+        // }
 
         // This method returns the employee's name
         public String getName()
         {
             return this.Name;
+        }
+
+        public void ApplyTransaction(double amount)
+        {
+            System.Console.WriteLine("Transaction applied, {0} added", amount);
         }
     }
 }
